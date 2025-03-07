@@ -1,0 +1,28 @@
+﻿@model List<DoodleGone.Models.Eraser>
+@{
+    Layout = "_Layout";
+}
+<h2>Eraser Catalogue</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Colour</th>
+            <th>Size</th>
+            <th>Durability</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eraser in Model)
+        {
+            <tr>
+                <td>@eraser.Name</td>
+                <td>@eraser.Colour</td>
+                <td>@eraser.Size</td>
+                <td>@eraser.Durability</td>
+                <td>@eraser.Price.ToString("C")</td>  <!-- Formats the price to display as currency -->
+            </tr>
+        }
+    </tbody>
+</table>
